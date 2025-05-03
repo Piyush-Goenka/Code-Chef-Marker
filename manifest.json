@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "CodeChef Marker",
+  "version": "1.0",
+  "description": "Mark tick to accepted",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "CodeChef Marker"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.codechef.com/START*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
